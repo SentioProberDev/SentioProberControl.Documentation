@@ -8,11 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://sentio.atv-systems.de/index.html">
+        <link rel="canonical" href="https://sentio.atv-systems.de/GettingStarted.html">
       
       
-      
-        <link rel="next" href="SentioProber.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Sentio Prober Control</title>
+        <title>Getting Started - Sentio Prober Control</title>
       
     
     
@@ -75,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sentio-prober-control-documentation" class="md-skip">
+        <a href="#getting-started" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Getting Started
             
           </span>
         </div>
@@ -222,29 +220,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -253,60 +231,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initialization" class="md-nav__link">
-    Initialization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-first-example" class="md-nav__link">
-    A first example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -935,25 +859,19 @@
     Overview
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initialization" class="md-nav__link">
-    Initialization
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a-first-example" class="md-nav__link">
-    A first example
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -975,25 +893,25 @@
   
 
 
-<h1 id="sentio-prober-control-documentation">Sentio Prober Control Documentation</h1>
-<p><img alt="AST_Back_2A fw_" src="https://user-images.githubusercontent.com/2202567/204108957-0c7a864a-a526-4d32-a1ca-51985a0b01c6.png" /></p>
+<h1 id="getting-started">Getting Started</h1>
 <h2 id="installation">Installation</h2>
 <p>The package for controlling MPI probe stations running the MPI SENTIO Software suite is available via <a href="https://pypi.org/project/sentio-prober-control/">pythons package index</a>. To install the
 package simply type:</p>
-<p><code>python -m pip install sentio-prober-control</code></p>
+<p><code>py -m pip install sentio-prober-control</code></p>
 <h2 id="overview">Overview</h2>
 <p>All functionality is accessed via an object of type <a href="SentioProber.html">SentioProber</a> . You should only have a single instance of this class in your 
-python script. Naturally a script should start with initializing the prober.</p>
-<h3 id="initialization">Initialization</h3>
-<p>The following minimal example creates an instance of the prober class and initializes it for TCP/IP communication with a 
-SENTIO running on the local PC on port 35555:</p>
+python script. This class is your gateway to control a probe station running the MPI SENTIO Software suite. Naturally a script 
+should start with initializing the prober.</p>
+<p>The following minimal example creates an instance of the prober class and triggers a switch of the active SENTIO 
+module by using its select_module function:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Sentio.ProberSentio</span> <span class="kn">import</span> <span class="n">SentioProber</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">prober</span> <span class="o">=</span> <span class="n">SentioProber</span><span class="o">.</span><span class="n">create_prober</span><span class="p">(</span><span class="s2">&quot;tcpip&quot;</span><span class="p">,</span> <span class="s2">&quot;127.0.0.1:35555&quot;</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">prober</span><span class="o">.</span><span class="n">select_module</span><span class="p">(</span><span class="n">Module</span><span class="o">.</span><span class="n">Wafermap</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">prober</span> <span class="o">=</span> <span class="n">SentioProber</span><span class="o">.</span><span class="n">create_prober</span><span class="p">(</span><span class="s2">&quot;tcpip&quot;</span><span class="p">,</span> <span class="s2">&quot;127.0.0.1:35555&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prober</span><span class="o">.</span><span class="n">select_module</span><span class="p">(</span><span class="n">Module</span><span class="o">.</span><span class="n">Wafermap</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Some functionality is provided directy via member functions of the ProberSentio class. Functionality of SENTIO modules
 can be accessed via the <a href="SentioProber.html">module attributes</a> class. </p>
-<h3 id="a-first-example">A first example</h3>
+<h2 id="example">Example</h2>
 <p>The following example will set up a wafer map. <a href="WafermapCommandGroup.html">Wafermap functionality</a> is accessed via the map attribute of the prober class.</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Sentio.ProberSentio</span> <span class="kn">import</span> <span class="n">SentioProber</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -1035,6 +953,17 @@ can be accessed via the <a href="SentioProber.html">module attributes</a> class.
 </span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
 </span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 </span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="quickstart">Quickstart</h2>
+<p>The <a href="/SentioProber/">SentioProber</a> class is your gateway to control a probe station running the MPI SENTIO 
+Software suite. In order to use it you need to create a SentioProber instance.</p>
+<p>The following example creates a prober instance and then triggers a switch of the active SENTIO module by 
+using the select_module function:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Sentio.ProberSentio</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Communication.CommunicatorTcpIp</span> <span class="kn">import</span> <span class="n">CommunicatorTcpIp</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">prober</span> <span class="o">=</span> <span class="n">SentioProber</span><span class="p">(</span><span class="n">CommunicatorTcpIp</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&quot;127.0.0.1:35555&quot;</span><span class="p">))</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">prober</span><span class="o">.</span><span class="n">select_module</span><span class="p">(</span><span class="n">Module</span><span class="o">.</span><span class="n">Wafermap</span><span class="p">)</span>
 </span></code></pre></div>
 
 

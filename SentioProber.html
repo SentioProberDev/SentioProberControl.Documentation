@@ -1,0 +1,5654 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sentio.atv-systems.de/SentioProber.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="AuxCommandGroup.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Prober Operations - Sentio Prober Control</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sentioprober" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.mpi-corporation.com/ast/" title="Sentio Prober Control" class="md-header__button md-logo" aria-label="Sentio Prober Control" data-md-component="logo">
+      
+  <img src="images/mpilogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sentio Prober Control
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prober Operations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SentioProberDev/SentioProberControl" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.mpi-corporation.com/ast/" title="Sentio Prober Control" class="md-nav__button md-logo" aria-label="Sentio Prober Control" data-md-component="logo">
+      
+  <img src="images/mpilogo.png" alt="logo">
+
+    </a>
+    Sentio Prober Control
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SentioProberDev/SentioProberControl" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Probe Station Control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Probe Station Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Prober Operations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="SentioProber.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Prober Operations
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber" class="md-nav__link">
+    SentioProber
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.abort_command" class="md-nav__link">
+    abort_command()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.clear_contact" class="md-nav__link">
+    clear_contact()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.create_prober" class="md-nav__link">
+    create_prober()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_hover" class="md-nav__link">
+    enable_chuck_hover()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_overtravel" class="md-nav__link">
+    enable_chuck_overtravel()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_hover" class="md-nav__link">
+    enable_chuck_site_hover()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_overtravel" class="md-nav__link">
+    enable_chuck_site_overtravel()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.file_transfer" class="md-nav__link">
+    file_transfer()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_height" class="md-nav__link">
+    get_chuck_site_height()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_status" class="md-nav__link">
+    get_chuck_site_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_theta" class="md-nav__link">
+    get_chuck_theta()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_xy" class="md-nav__link">
+    get_chuck_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_z" class="md-nav__link">
+    get_chuck_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_project" class="md-nav__link">
+    get_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site" class="md-nav__link">
+    get_scope_site()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site_num" class="md-nav__link">
+    get_scope_site_num()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_xy" class="md-nav__link">
+    get_scope_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_z" class="md-nav__link">
+    get_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_chuck_xyz" class="md-nav__link">
+    has_chuck_xyz()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_xyz" class="md-nav__link">
+    has_scope_xyz()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_z" class="md-nav__link">
+    has_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.initialize_if_needed" class="md-nav__link">
+    initialize_if_needed()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.local_mode" class="md-nav__link">
+    local_mode()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_contact" class="md-nav__link">
+    move_chuck_contact()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_home" class="md-nav__link">
+    move_chuck_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_load" class="md-nav__link">
+    move_chuck_load()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_separation" class="md-nav__link">
+    move_chuck_separation()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_site" class="md-nav__link">
+    move_chuck_site()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_theta" class="md-nav__link">
+    move_chuck_theta()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_work_area" class="md-nav__link">
+    move_chuck_work_area()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_xy" class="md-nav__link">
+    move_chuck_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_z" class="md-nav__link">
+    move_chuck_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_lift" class="md-nav__link">
+    move_scope_lift()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_xy" class="md-nav__link">
+    move_scope_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_z" class="md-nav__link">
+    move_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_vce_z" class="md-nav__link">
+    move_vce_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.name" class="md-nav__link">
+    name()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.open_project" class="md-nav__link">
+    open_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.query_command_status" class="md-nav__link">
+    query_command_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.save_config" class="md-nav__link">
+    save_config()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.save_project" class="md-nav__link">
+    save_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.select_module" class="md-nav__link">
+    select_module()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.send_cmd" class="md-nav__link">
+    send_cmd()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_chuck_site_height" class="md-nav__link">
+    set_chuck_site_height()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_ink" class="md-nav__link">
+    set_ink()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_stepping_contact_mode" class="md-nav__link">
+    set_stepping_contact_mode()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_vacuum" class="md-nav__link">
+    set_vacuum()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint" class="md-nav__link">
+    show_hint()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint_and_wait" class="md-nav__link">
+    show_hint_and_wait()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_message" class="md-nav__link">
+    show_message()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.start_initialization" class="md-nav__link">
+    start_initialization()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_all" class="md-nav__link">
+    wait_all()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_complete" class="md-nav__link">
+    wait_complete()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AuxCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aux Sites
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LoaderCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Wafermap
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Wafermap
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapBinningCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapBinsCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapDieCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapDieCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapPathCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapPathCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapPoiCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapPoiCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WafermapSubsiteGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WafermapSubsiteGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ProbeCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probe Handling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="QalibriaCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Qalibria
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="SiPHCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SiPH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="StatusCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ServiceCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_9" >
+        
+          <label class="md-nav__link" for="__nav_2_2_9" id="__nav_2_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vísion
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Vísion
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VisionCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisionCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VisionCameraCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisionCameraCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VisionCompensationGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisionCompensationGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="VisionIMagProCommandGroup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisionIMagProCommandGroup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ProberException.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProberException
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Response.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Response
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Enumerations.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enumerations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber" class="md-nav__link">
+    SentioProber
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.abort_command" class="md-nav__link">
+    abort_command()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.clear_contact" class="md-nav__link">
+    clear_contact()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.create_prober" class="md-nav__link">
+    create_prober()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_hover" class="md-nav__link">
+    enable_chuck_hover()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_overtravel" class="md-nav__link">
+    enable_chuck_overtravel()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_hover" class="md-nav__link">
+    enable_chuck_site_hover()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_overtravel" class="md-nav__link">
+    enable_chuck_site_overtravel()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.file_transfer" class="md-nav__link">
+    file_transfer()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_height" class="md-nav__link">
+    get_chuck_site_height()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_status" class="md-nav__link">
+    get_chuck_site_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_theta" class="md-nav__link">
+    get_chuck_theta()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_xy" class="md-nav__link">
+    get_chuck_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_z" class="md-nav__link">
+    get_chuck_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_project" class="md-nav__link">
+    get_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site" class="md-nav__link">
+    get_scope_site()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site_num" class="md-nav__link">
+    get_scope_site_num()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_xy" class="md-nav__link">
+    get_scope_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_z" class="md-nav__link">
+    get_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_chuck_xyz" class="md-nav__link">
+    has_chuck_xyz()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_xyz" class="md-nav__link">
+    has_scope_xyz()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_z" class="md-nav__link">
+    has_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.initialize_if_needed" class="md-nav__link">
+    initialize_if_needed()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.local_mode" class="md-nav__link">
+    local_mode()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_contact" class="md-nav__link">
+    move_chuck_contact()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_home" class="md-nav__link">
+    move_chuck_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_load" class="md-nav__link">
+    move_chuck_load()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_separation" class="md-nav__link">
+    move_chuck_separation()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_site" class="md-nav__link">
+    move_chuck_site()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_theta" class="md-nav__link">
+    move_chuck_theta()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_work_area" class="md-nav__link">
+    move_chuck_work_area()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_xy" class="md-nav__link">
+    move_chuck_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_z" class="md-nav__link">
+    move_chuck_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_lift" class="md-nav__link">
+    move_scope_lift()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_xy" class="md-nav__link">
+    move_scope_xy()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_z" class="md-nav__link">
+    move_scope_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.move_vce_z" class="md-nav__link">
+    move_vce_z()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.name" class="md-nav__link">
+    name()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.open_project" class="md-nav__link">
+    open_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.query_command_status" class="md-nav__link">
+    query_command_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.save_config" class="md-nav__link">
+    save_config()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.save_project" class="md-nav__link">
+    save_project()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.select_module" class="md-nav__link">
+    select_module()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.send_cmd" class="md-nav__link">
+    send_cmd()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_chuck_site_height" class="md-nav__link">
+    set_chuck_site_height()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_ink" class="md-nav__link">
+    set_ink()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_stepping_contact_mode" class="md-nav__link">
+    set_stepping_contact_mode()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.set_vacuum" class="md-nav__link">
+    set_vacuum()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint" class="md-nav__link">
+    show_hint()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint_and_wait" class="md-nav__link">
+    show_hint_and_wait()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.show_message" class="md-nav__link">
+    show_message()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.start_initialization" class="md-nav__link">
+    start_initialization()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_all" class="md-nav__link">
+    wait_all()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_complete" class="md-nav__link">
+    wait_complete()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="sentioprober">SentioProber</h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="sentio_prober_control.Sentio.ProberSentio.SentioProber"></a>
+  <div class="doc doc-contents first">
+          <p class="doc doc-class-bases">
+            Bases: <code><span title="sentio_prober_control.Sentio.ProberBase.ProberBase">ProberBase</span></code></p>
+
+  
+      <p>This class represents the SENTIO probe station in python.
+It provides wrapper for most of the remote commands exposed by SENTIO.</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>aux</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.AuxCommandGroup.AuxCommandGroup" href="AuxCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.AuxCommandGroup.AuxCommandGroup">AuxCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The aux command group provides access the the aux site modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>loader</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.LoaderCommandGroup.LoaderCommandGroup" href="LoaderCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.LoaderCommandGroup.LoaderCommandGroup">LoaderCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The loader command group provides access to the loader modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>map</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.WafermapCommandGroup.WafermapCommandGroup" href="WafermapCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.WafermapCommandGroup.WafermapCommandGroup">WafermapCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The wafermap command group provides access to the wafermap modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>probe</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup" href="ProbeCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup">ProbeCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe command group provides access to the probe modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>qalibria</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.QAlibriaCommandGroup.QAlibriaCommandGroup" href="QalibriaCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.QAlibriaCommandGroup.QAlibriaCommandGroup">QAlibriaCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The qalibria command group provides access to the qalibria modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>service</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.ServiceCommandGroup.ServiceCommandGroup" href="ServiceCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.ServiceCommandGroup.ServiceCommandGroup">ServiceCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The service command group provides access to the service modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>siph</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.SiPHCommandGroup.SiPHCommandGroup" href="SiPHCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.SiPHCommandGroup.SiPHCommandGroup">SiPHCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The siph command group provides access to the SiPH modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>status</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StatusCommandGroup.StatusCommandGroup" href="StatusCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StatusCommandGroup.StatusCommandGroup">StatusCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The status command group provides access to the dashboard modules functionality. (formerly called status module)</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>vision</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup" href="VisionCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup">VisionCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The vision command group provides access to the vision modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.__init__" class="doc doc-heading">
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Construct a SENTIO prober object.</p>
+<p>The prober must be initialized with a communication object that
+specifies how the system communicates with the probe station.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>comm</code></td>
+          <td>
+                <code><span title="sentio_prober_control.Communication.CommunicatorBase.CommunicatorBase">CommunicatorBase</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The communicator to use for communication with the prober.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.abort_command" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">abort_command</span><span class="p">(</span><span class="n">cmd_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Stop an ongoing asynchronous remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cmd_id</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The id of the async command to abort.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.clear_contact" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">clear_contact</span><span class="p">(</span><span class="n">site</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Clear contact positions.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to clear. If None is given all sites will be cleared.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.create_prober" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">create_prober</span><span class="p">(</span><span class="n">comm_type</span><span class="p">,</span> <span class="n">arg1</span><span class="o">=</span><span class="s1">&#39;127.0.0.1:35555&#39;</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create an instance of a SentioProber object that is bound to a certain communication method. Your choices of communication are tcpip, gpib and visa.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>comm_type</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The type of communication to use. Valid values are "tcpip", "gpib" and "visa".</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>arg1</code></td>
+          <td>
+                <code>object</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>For tcpip this is a single string specifying address and port 
+           like "127.0.0.1:35555". For visa this is the address of the device like "GPIB0::20::INSTR". For gpib two parameters are needed. 
+           The first one is the <a href="/Communication/GpibCardVendor">type of driver/card</a> installed in the system, the second parameter is the address of the device like "GPIB0:20".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;127.0.0.1:35555&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>arg2</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Only used for gpib communication. This is the GPIB address of the prober i.e. "GPIB0:20".</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_hover" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_chuck_hover</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable chuck hover height.</p>
+<p>The Hover height is a height that is significantly closer to the chuck compared to the separation height.
+It is closer to the wafer but it is not safe for fast or long chuck moves as the chuck may be slightly
+tilted.</p>
+<p>This function wraps SENTIO's "enable_chuck_hover" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>stat</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to enable, False to disable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_overtravel" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_chuck_overtravel</span><span class="p">(</span><span class="n">stat</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable chuck overtravel.</p>
+<p>This function wraps SENTIO's "enable_chuck_overtravel" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>stat</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to enable, False to disable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_hover" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_chuck_site_hover</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">stat</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable chuck site hover height.</p>
+<p>The Hover height is a height that is significantly closer to the chuck compared to the separation height.
+It is closer to the wafer but it is not safe for fast or long chuck moves as the chuck may be slightly
+tilted.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to enable hover height for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stat</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to enable, False to disable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.enable_chuck_site_overtravel" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_chuck_site_overtravel</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">stat</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable overtravel distance for a specific chuck site.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to enable overtravel distance for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stat</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to enable, False to disable.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.file_transfer" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">file_transfer</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Transfer a file to the prober.</p>
+<p>This function will transfer a file to the prober. The file will be stored in the position specified by
+the dest argument. Transmission of the file may take some time.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>source</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The path to the file to transfer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dest</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The destination path on the prober. Must be a complete path including file name. Make sure that SENTIO has write access to the given destination.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_height" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_chuck_site_height</span><span class="p">(</span><span class="n">site</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves height information of a chuck site</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>contact, separation, overtravel_dist, hover_gap = get_chuck_site_height(ChuckSite.Wafer)
+</code></pre></div>
+<p>Gets for chuck site "Wafer" contact height, separation heights ,overtravel distance and hover height</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>contact</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>contact height</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>separation</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>separation gap</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>overtravel_dist</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>overtravel distance</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>hover_gap</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>hover gap</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_site_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_chuck_site_status</span><span class="p">(</span><span class="n">site</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get status of a chuck site.</p>
+<p>Wraps SENTIO's "get_chuck_site_status" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>hasHome</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the chuck site has a home position.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>hasContact</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the chuck site has a contact position.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>overtravelActive</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the overtravel is active.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>vacuumOn</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the vacuum is on.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_theta" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_chuck_theta</span><span class="p">(</span><span class="n">site</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the current angle of the chuck.</p>
+<p>Wraps SENTIO's "get_chuck_theta" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Raises:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.ProberBase.ProberException" href="ProberException.html#sentio_prober_control.Sentio.ProberBase.ProberException">ProberException</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If no available port is found.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>angle</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current angle of the chuck site in degrees.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_xy" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_chuck_xy</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">ref</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get current chuck xy position with respect to a given reference.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckXYReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckXYReference">ChuckXYReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>x position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>y position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_chuck_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_chuck_z</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get chuck z position.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckZReference">ChuckZReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>height</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual z position of the chuck in micrometer (from axis zero).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_project" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_project</span><span class="p">(</span><span class="n">pfi</span><span class="o">=</span><span class="n">ProjectFileInfo</span><span class="o">.</span><span class="n">FullPath</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get the name of the current project.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pfi</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProjectFileInfo" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProjectFileInfo">ProjectFileInfo</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The type of information to get.</p>
+            </div>
+          </td>
+          <td>
+                <code><span title="sentio_prober_control.Sentio.Enumerations.ProjectFileInfo.FullPath">FullPath</span></code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>project_name</code></td>          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the current project.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_scope_site</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get scope site data.</p>
+<div class="language-text highlight"><pre><span></span><code>This command queries the name and position of a scope site. The index is zero based.
+</code></pre></div>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>idx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index of the site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>num</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The number of defined scope sites.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_site_num" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_scope_site_num</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get total number of scope sites.</p>
+<p>The scope stage can store a list of sites. Each site has a position and a name.
+This function returns the number of defined scope sites.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>num</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The number of defined scope sites.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_xy" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_scope_xy</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get current scope xy position.</p>
+<p>The returned position is an absolute position with respect to the axis zero in micrometer.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current x position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current y position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.get_scope_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_scope_z</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get scope z position in micrometer from axis zero.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>height</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.has_chuck_xyz" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">has_chuck_xyz</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns True if the chuck has xyz axes.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>has_xyz</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the chuck has xyz axes.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_xyz" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">has_scope_xyz</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns True if the scope has xyz axes.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>has_xyz</code></td>          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the scope has xyz axes.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.has_scope_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">has_scope_z</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns true if the microscope has a motorized z axis.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if the scope has z axes.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.initialize_if_needed" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">initialize_if_needed</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize the prober if it is not already initialized.</p>
+<p>This command will check if the prober is already initialized. If not
+it will start the initialization process and wait for it to complete.</p>
+<p>You do not have to call waitcomplete after this function on your own!</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.local_mode" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">local_mode</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Switch the prober back into local mode.</p>
+<p>The probe station will automatically enter remote mode when a remote command is received.
+It will remian in remote mode even after the script is finished. This command can be used
+to switch the machine back into local mode and thus enable its UI.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_contact" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_contact</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move the chuck to contact height.</p>
+<p>Wraps SENTIO's "move_chuck_contact" remote command.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>height</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The contact height in micrometer from chuck z axis zero.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_home" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_home</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move chuck to its home position.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The x position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The y position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_load" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_load</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move chuck to load position.</p>
+<p>Wraps SENTIO's "move_chuck_load" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pos</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.LoadPosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.LoadPosition">LoadPosition</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The load position to move to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_separation" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_separation</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move the chuck to separation height.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The separation height in micrometer from chuck z axis zero.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_site" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_site</span><span class="p">(</span><span class="n">site</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Moves chuck to the last active position of the selected chuck site.</p>
+<p>Wraps SENTIO's "move_chuck_site" remote command.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The x position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The y position in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>z</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z height in micrometer.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>theta</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The theta angle in degrees.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_theta" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_theta</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move chuck theta axis to a given angle.</p>
+<p>Wraps SENTIO's "move_chuck_theta" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckThetaReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckThetaReference">ChuckThetaReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>angle</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The angle to move to in degrees.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_work_area" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_work_area</span><span class="p">(</span><span class="n">area</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move the chuck to a given work area.</p>
+<p>A SENTIO probe station can have different work areas. One area is for probing. This is the default
+work area and present on all probe stations. When the chuck is at probing position is is roughly
+centered with respect to the platen and located in a space were probes can go into contact.
+Depending on the machine type a prober may be equipped with a second work area. This
+area is located under an optional off-axis camera. The off-axis camera allows
+inspection of the wafer when the scope camera view is blocked by certain probe card types.</p>
+<p>This function wraps SENTIO's "move_chuck_work_area" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>area</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.WorkArea" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.WorkArea">WorkArea</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The work area to move to.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_xy" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_xy</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move chuck to a given xy position.</p>
+<p>Wraps SENTIO's "move_chuck_xy" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckXYReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckXYReference">ChuckXYReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>x</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The x position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The y position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck x position after the move in micrometer (from zero)</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck y position after the move in micrometer (from zero)</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_chuck_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_chuck_z</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move chuck to a given z position.</p>
+<p>Wraps SENTIO's "move_chuck_z" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckZReference">ChuckZReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z-reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>z</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual z position in micrometer after the move.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_lift" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_scope_lift</span><span class="p">(</span><span class="n">state</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move scope to its lift position.</p>
+<p>The scope lift position is a position where the scope is
+at its axis maximum. This position will give you the maximum
+possible are of unhindered operation when changing probe cards
+or other maintenance tasks.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>state</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to move to the lift position, False to move away from the lift position.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_xy" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_scope_xy</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move scope to a given xy position.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ScopeXYReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ScopeXYReference">ScopeXYReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>x</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The x position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>y</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The y position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>x</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Scope x position after the move in micrometers (from zero)</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+<td><code>y</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Scope x position after the move in micrometers (from zero)</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_scope_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_scope_z</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move scope to a given z position.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ScopeZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ScopeZReference">ScopeZReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>z</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual z position in micrometer after the move.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.move_vce_z" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_vce_z</span><span class="p">(</span><span class="n">stage</span><span class="p">,</span> <span class="n">ref</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move VCE stage to a given z position.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ref</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.VceZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.VceZReference">VceZReference</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The reference to use for the move.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>z</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z position to move to in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The actual z position in micrometer after the move.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.name" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">name</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the name of the prober.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>This function will always return the string "SentioProber".</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.open_project" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">open_project</span><span class="p">(</span><span class="n">project</span><span class="p">,</span> <span class="n">restore_heights</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Open a SENTIO project file.</p>
+<p>Wraps SENTIO's "open_project" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>project</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name or path of the project to open. If a full
+     path to the trex project file is given SENTIO will try to open this file.
+     If the argument does not contain a path SENTIO will look in its default
+     project folder for a matching project and open it.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>restore_heights</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>If set to true SENTIO will restore the contact
+             heights from the project. Be carefull when using this option because
+             the contact heights may have been become invalid since creating the project
+             due to a probe card change.</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.query_command_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">query_command_status</span><span class="p">(</span><span class="n">cmd_id</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Query the status of an async command.</p>
+<p>This command will send a query to the prober to get the status
+of an async command. The submitted command id must be a valid id
+of an async command that was previously started at the prober.</p>
+<p>When an async command is being executed SENTIO can receive other
+remnote commands. This command is intended to be used in a polling
+loop to query the status of ongoing remote commands.</p>
+<p>Example:</p>
+<pre><code>while True:
+    time.sleep(1)
+    resp = prober.query_command_status(cmd_id)
+    if (resp.errc()!=RemoteCommandError.CommandPending):
+        break;</code></pre>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cmd_id</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The id of the async command to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.save_config" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">save_config</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Save the SENTIO configuration file.</p>
+<p>Wraps SENTIO's "save_config" remote command.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.save_project" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">save_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Save the current SENTIO project.</p>
+<p>Wraps SENTIO's "save_project" remote command.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.select_module" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">select_module</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">tabSheet</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Activate a given SENTIO module.</p>
+<p>In response to this function SENTIO will switch its user interface to make
+the given module the active one.</p>
+<p>This function wraps the "select_module" remote command of SENTIO.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>module</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.Module" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.Module">Module</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The module to activate.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>tabSheet</code></td>
+          <td>
+                <code>str | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The name of the module tab to activate. If None is given the default tab will be activated.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.send_cmd" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">send_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sends a command to the prober and return a response object.</p>
+<p>This function is intended for directly sending remote commands that
+are not yet included in the python wrapper. It will send the command
+and parse the respone from SENTIO.</p>
+<p>Do NOT send low level commands that do not have a response (i.e. "*LOCAL").
+This will lock the communication pipeline as it is waiting for a
+response that never arrives.</p>
+<p>It will then return a Response object with the extracted data from
+SENTIO's response.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.set_chuck_site_height" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_chuck_site_height</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">contact</span><span class="p">,</span> <span class="n">separation</span><span class="p">,</span> <span class="n">overtravel_dist</span><span class="p">,</span> <span class="n">hover_gap</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sets z position information of a chuck site</p>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code>prober.set_chuck_site_height(ChuckSite.Wafer,16000,250,20,50)
+</code></pre></div>
+<p>Will set the contact height of the wafer site to 16000 µm with a separation height of 250 µm an overtravel of 20 and a hover height of 50</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to query.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>contact</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The new contact height in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separation</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The new separation height in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>overtravel_dist</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The new overtravel distance in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>hover_gap</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The new hover gap in micrometer.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.set_ink" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_ink</span><span class="p">(</span><span class="n">idx_inker</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Trigger the inker device.</p>
+<div class="language-text highlight"><pre><span></span><code>Wraps SENTIO&#39;s &quot;set_ink&quot; remote command.
+</code></pre></div>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>idx_inker</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index of the inker to trigger. The index is one based (use either 1 or 2).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.set_stepping_contact_mode" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_stepping_contact_mode</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Change the stepping contact mode.</p>
+<p>The stepping contact mode defines what happens during stepping over a wafer.
+The following modes are available:</p>
+<ul>
+<li>BackToContact: The chuck will step into contact position</li>
+<li>StepToSeparation: The chuck will step into separation position. You have to move into contact with a seaparate command.</li>
+<li>LockContack: The Chuck is not allowed to leave contact position automatically as part of a stepping command. You have to move into separation with a separate command bevore being able to step to the next die..</li>
+</ul>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>mode</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.SteppingContactMode" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.SteppingContactMode">SteppingContactMode</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The stepping contact mode to set.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.set_vacuum" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_vacuum</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">stat</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Switches the vacuum of a chuck site on or off.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>site</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ChuckSite" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ChuckSite">ChuckSite</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck site to switch the vacuum for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>stat</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True to switch the vacuum on, False to switch it off.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">show_hint</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">subtext</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Show an on screen message (hint) and return immediately</p>
+<p>Hints are on screen messages that pop up in SENTIO's lower left corner. This hint will
+disappears automatically after a few seconds.</p>
+<p>This function wraps SENTIO's "status:show_hint" remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>msg</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The message to display.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>subtext</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The subtext to display.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.show_hint_and_wait" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">show_hint_and_wait</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">subtext</span><span class="p">,</span> <span class="n">button_caption</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">180</span><span class="p">,</span> <span class="n">lock_ui</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Show an on screen message with a button wait for a button to be pressed.</p>
+<p>Hints pop up in SENTIO's lower left corner. This function will display a hint with a button
+and only return once the button has been pressed.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>msg</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The message to display.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>subtext</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The subtext to display. Subtext is displayed in a second line with a slightly smaller font.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>button_caption</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The caption of the button.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>timeout</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An optional timeout in seconds after which the dialog will be closed automatically. (default = 180 s)</p>
+            </div>
+          </td>
+          <td>
+                <code>180</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lock_ui</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An optional flag that determines wether the UI shall be locked. Most of the UI is disabled in
+     remote mode anyway. This button affects only the on screen interactions on the right side of the main
+     module view. (default = True)</p>
+            </div>
+          </td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.show_message" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">show_message</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">buttons</span><span class="p">,</span> <span class="n">caption</span><span class="p">,</span> <span class="n">dialog_timeout</span><span class="o">=</span><span class="mi">180</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pop up a message dialog in SENTIO and wait for the result.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>msg</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The message to display.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>buttons</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.DialogButtons" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.DialogButtons">DialogButtons</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The buttons to display.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>caption</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The caption of the message box.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>dialog_timeout</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An optional dialog timeout in seconds after which the dialog will be closed automatically.</p>
+            </div>
+          </td>
+          <td>
+                <code>180</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.DialogButtons" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.DialogButtons">DialogButtons</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The button that was as an DialogButtons enum value.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.start_initialization" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">start_initialization</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Start the initialization of the probe station.</p>
+<p>This function will start the initialization of the prober. This is an
+async command that will return immediately.</p>
+<p>The initialization process will take some time to complete. Use
+waitcomplete to wait for the initialization to complete.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_all" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">wait_all</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Wait until all async commands have finished.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>timeout</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The timeout in seconds.</p>
+            </div>
+          </td>
+          <td>
+                <code>90</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.ProberSentio.SentioProber.wait_complete" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">wait_complete</span><span class="p">(</span><span class="n">id_or_resp</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Wait for a single async command to complete.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cmd_id</code></td>
+          <td>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The id of the async command to wait for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>timeout</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The timeout in seconds.</p>
+            </div>
+          </td>
+          <td>
+                <code>300</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A response object with the result of the command.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div><p>handler: python
+    options:
+        members:
+            SentioProber</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://www.atv-systems.de/impressum">Impressum</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.atv-systems.de/datenschutz">Datenschutz</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
