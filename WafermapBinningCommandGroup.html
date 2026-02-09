@@ -524,6 +524,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.resize" class="md-nav__link">
+    resize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_all" class="md-nav__link">
     set_all()
   </a>
@@ -533,6 +540,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_bin" class="md-nav__link">
     set_bin()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_bin_info" class="md-nav__link">
+    set_bin_info()
   </a>
   
 </li>
@@ -1011,6 +1025,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.resize" class="md-nav__link">
+    resize()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_all" class="md-nav__link">
     set_all()
   </a>
@@ -1020,6 +1041,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_bin" class="md-nav__link">
     set_bin()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_bin_info" class="md-nav__link">
+    set_bin_info()
   </a>
   
 </li>
@@ -1090,7 +1118,7 @@
 
   <div class="doc doc-contents ">
   
-      <p>Clear all bins. Remove the bin code from all dies and sibsites.</p>
+      <p>Clear all bins. Remove the bin code from all dies and subsites.</p>
 
   </div>
 
@@ -1251,11 +1279,21 @@ visualizing parameters across the wafer.</p>
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.Tuple">Tuple</span>[int, str, <a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.BinQuality" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.BinQuality">BinQuality</a>, str]</code>
+                <code>int</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A tuple containing the following data items: bin index (same value as the argument), bin description, bin quality (pass/fail information) and bin color.</p>
+              <p>A tuple containing the following data items: bin index (same value as the argument), bin description,</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>bin quality (pass/fail information), and bin color.</p>
             </div>
           </td>
         </tr>
@@ -1348,6 +1386,57 @@ visualizing parameters across the wafer.</p>
           <td>
             <div class="doc-md-description">
               <p>The file to load the binning table from.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.resize" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">resize</span><span class="p">(</span><span class="n">bin_table_size</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Resize the binning table.</p>
+<p>Wraps SENTIO's map:bins:resize remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>bin_table_size</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The new size of the binning table.</p>
             </div>
           </td>
           <td>
@@ -1477,7 +1566,7 @@ visualizing parameters across the wafer.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The column of the die.#</p>
+              <p>The column of the die.</p>
             </div>
           </td>
           <td>
@@ -1510,6 +1599,99 @@ visualizing parameters across the wafer.</p>
           </td>
           <td>
                 <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapBinsCommandGroup.WafermapBinsCommandGroup.set_bin_info" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_bin_info</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">bin_quality</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set bin information in the binning table.</p>
+<p>Wraps SENTIO's map:bins:set_bin_info remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index of the bin.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>description</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The description of the bin.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bin_quality</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.BinQuality" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.BinQuality">BinQuality</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Pass/Fail/Undefined.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>color</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The color of the bin.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
           </td>
         </tr>
     </tbody>

@@ -509,6 +509,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_index" class="md-nav__link">
+    get_current_index()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_subsite" class="md-nav__link">
+    get_current_subsite()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_status" class="md-nav__link">
+    get_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.remove" class="md-nav__link">
     remove()
   </a>
@@ -941,6 +962,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_index" class="md-nav__link">
+    get_current_index()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_subsite" class="md-nav__link">
+    get_current_subsite()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_status" class="md-nav__link">
+    get_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.remove" class="md-nav__link">
     remove()
   </a>
@@ -1020,8 +1062,7 @@
 
   <div class="doc doc-contents ">
   
-      <p>Add a die to the wafermap. If the die is already part of the map
-nothing happens.</p>
+      <p>Add a die to the wafermap. If the die is already part of the map, nothing happens.</p>
 
 
 
@@ -1077,6 +1118,189 @@ nothing happens.</p>
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_index" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_current_index</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves information about the current die.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Tuple">Tuple</span>[int, int, int]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A tuple containing:
+- List Index (int): The index in the routing list.
+- Column Index (int): The column index relative to the grid origin.
+- Row Index (int): The row index relative to the grid origin.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_current_subsite" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_current_subsite</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves information about the currently active subsite.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Subsite Index (int): The index of the currently active subsite.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.get_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_status</span><span class="p">(</span><span class="n">col_index</span><span class="p">,</span> <span class="n">row_index</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieves information about presence and selection of a die.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>col_index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Column of the die relative to the grid origin.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>row_index</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Row number of the die relative to the grid origin.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Status</code></td>          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <ul>
+<li><code>1</code>: Die is selected.</li>
+<li><code>2</code>: Die is not selected.</li>
+<li><code>3</code>: Die is not present.</li>
+</ul>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapDieCommandGroup.WafermapDieCommandGroup.remove" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code>
 
@@ -1086,7 +1310,7 @@ nothing happens.</p>
   <div class="doc doc-contents ">
   
       <p>Remove a die from the wafermap.</p>
-<p>This will mark the die as nonexistant and make it unavailable for stepping.
+<p>This will mark the die as nonexistent and make it unavailable for stepping.
 Removed dies are treated as if they were physically not present on the wafer.</p>
 <p>Wraps SENTIO's map:die:remove remote command.</p>
 

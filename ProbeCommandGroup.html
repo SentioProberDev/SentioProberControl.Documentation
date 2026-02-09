@@ -613,6 +613,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.enable_probe_motor" class="md-nav__link">
+    enable_probe_motor()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_site" class="md-nav__link">
     get_probe_site()
   </a>
@@ -622,6 +629,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_site_number" class="md-nav__link">
     get_probe_site_number()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_status" class="md-nav__link">
+    get_probe_status()
   </a>
   
 </li>
@@ -650,6 +664,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_home" class="md-nav__link">
     move_probe_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_lift" class="md-nav__link">
+    move_probe_lift()
   </a>
   
 </li>
@@ -685,6 +706,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.set_probe_home" class="md-nav__link">
     set_probe_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.set_probe_status" class="md-nav__link">
+    set_probe_status()
   </a>
   
 </li>
@@ -1050,6 +1078,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.enable_probe_motor" class="md-nav__link">
+    enable_probe_motor()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_site" class="md-nav__link">
     get_probe_site()
   </a>
@@ -1059,6 +1094,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_site_number" class="md-nav__link">
     get_probe_site_number()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_status" class="md-nav__link">
+    get_probe_status()
   </a>
   
 </li>
@@ -1087,6 +1129,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_home" class="md-nav__link">
     move_probe_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_lift" class="md-nav__link">
+    move_probe_lift()
   </a>
   
 </li>
@@ -1122,6 +1171,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.set_probe_home" class="md-nav__link">
     set_probe_home()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.set_probe_status" class="md-nav__link">
+    set_probe_status()
   </a>
   
 </li>
@@ -1185,7 +1241,7 @@ of the <a href="SentioProber.html">SentioProber</a> class.</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Sentio.ProberSentio</span> <span class="kn">import</span> <span class="n">SentioProber</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">prober</span> <span class="o">=</span> <span class="n">SentioProber</span><span class="o">.</span><span class="n">create_prober</span><span class="p">(</span><span class="s2">&quot;tcpip&quot;</span><span class="p">,</span> <span class="s2">&quot;127.0.0.1:35555&quot;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prober</span><span class="o">.</span><span class="n">probe</span><span class="o">.</span><span class="n">move_probe_xy</span><span class="p">(</span><span class="n">ProbeSentio</span><span class="o">.</span><span class="n">East</span><span class="p">,</span> <span class="n">ProbeXYReference</span><span class="o">.</span><span class="n">Current</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prober</span><span class="o">.</span><span class="n">probe</span><span class="o">.</span><span class="n">move_probe_xy</span><span class="p">(</span><span class="n">ProbePosition</span><span class="o">.</span><span class="n">East</span><span class="p">,</span> <span class="n">XyReference</span><span class="o">.</span><span class="n">Current</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
 </span></code></pre></div>
 
 
@@ -1236,7 +1292,7 @@ ProberSentio.wait_complete() or ProberSentio.query_command_status().</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1327,7 +1383,7 @@ use in conjunction with ProberSentio.wait_complete() or ProberSentio.query_comma
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1404,7 +1460,7 @@ use in conjunction with ProberSentio.wait_complete() or ProberSentio.query_comma
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1452,6 +1508,71 @@ use in conjunction with ProberSentio.wait_complete() or ProberSentio.query_comma
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.enable_probe_motor" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">enable_probe_motor</span><span class="p">(</span><span class="n">probe</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable/Disable the probe motor.</p>
+<p>Probe with 3 motors will enable and disable by following behavior.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>probe</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe to action.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>status</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable or disable status</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_site" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">get_probe_site</span><span class="p">(</span><span class="n">probe</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span></code>
 
@@ -1480,7 +1601,7 @@ This command returns the data associated with a site.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1507,11 +1628,11 @@ This command returns the data associated with a site.</p>
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.Tuple">Tuple</span>[int, str, float, float]</code>
+                <code><span title="typing.Tuple">Tuple</span>[str, float, float, str]</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A tuple containing the site index, the site name, the x position in micrometer and the y position in micrometer.</p>
+              <p>A tuple containing the site index, position x, the position y in micrometer and the reference.</p>
             </div>
           </td>
         </tr>
@@ -1574,6 +1695,91 @@ This command returns the total number of sites.</p>
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_probe_status</span><span class="p">(</span><span class="n">probe</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Obtain the status of probe.</p>
+<p>Command will return 4 probe status</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>probe</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe to step.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Status of positioner with 4 digits, 1st digit indicates the East Positioner, 2nd digit indicates West Positioner</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>3rd digit indicates the North Positioner, 4th digit indicates the South Positioner.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.get_probe_xy" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">get_probe_xy</span><span class="p">(</span><span class="n">probe</span><span class="p">,</span> <span class="n">ref</span><span class="p">)</span></code>
 
@@ -1600,7 +1806,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1614,7 +1820,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>ref</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeXYReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeXYReference">ProbeXYReference</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.XyReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.XyReference">XyReference</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1688,7 +1894,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1702,7 +1908,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>ref</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeZReference">ProbeZReference</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ZReference">ZReference</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1776,7 +1982,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1850,7 +2056,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1898,6 +2104,94 @@ This command returns the total number of sites.</p>
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_lift" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">move_probe_lift</span><span class="p">(</span><span class="n">stage</span><span class="p">,</span> <span class="n">probe</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Move a probe to its lift position.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>stage</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.Stage" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.Stage">Stage</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe stage (TopProbe/BottomProbe).</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>probe</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe position.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The z position after the move in micrometer (from zero).</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.move_probe_separation" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">move_probe_separation</span><span class="p">(</span><span class="n">probe</span><span class="p">)</span></code>
 
@@ -1924,7 +2218,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1998,7 +2292,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2012,7 +2306,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>ref</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeXYReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeXYReference">ProbeXYReference</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.XyReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.XyReference">XyReference</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2114,7 +2408,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2128,7 +2422,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>ref</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeZReference">ProbeZReference</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ZReference" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ZReference">ZReference</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2216,7 +2510,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2280,7 +2574,7 @@ This command returns the total number of sites.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2346,6 +2640,71 @@ This command returns the total number of sites.</p>
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.set_probe_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_probe_status</span><span class="p">(</span><span class="n">probe</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Enable/Disable the probe stage in the SENTIO.</p>
+<p>Enable/Disable the Probes in the SENTIO.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>probe</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The probe to action.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>status</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Enable or disable status</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.ProbeCommandGroup.ProbeCommandGroup.step_probe_site" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">step_probe_site</span><span class="p">(</span><span class="n">probe</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span></code>
 
@@ -2374,7 +2733,7 @@ This command initiates a step to such a site.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2464,7 +2823,7 @@ This command initiates a step to the first site.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2540,7 +2899,7 @@ This command initiates a step to the next site.</p>
         <tr>
           <td><code>probe</code></td>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbeSentio" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbeSentio">ProbeSentio</a></code>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.ProbePosition" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.ProbePosition">ProbePosition</a></code>
           </td>
           <td>
             <div class="doc-md-description">

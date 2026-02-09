@@ -549,8 +549,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get" class="md-nav__link">
+    get()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get_num" class="md-nav__link">
     get_num()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.remove" class="md-nav__link">
+    remove()
   </a>
   
 </li>
@@ -955,8 +969,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get" class="md-nav__link">
+    get()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get_num" class="md-nav__link">
     get_num()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.remove" class="md-nav__link">
+    remove()
   </a>
   
 </li>
@@ -1119,6 +1147,81 @@
 
 
 
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get POI data of a single POI.</p>
+<p>Wraps SENTIO's map:poi:get remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>idx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index of the POI to retrieve.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>tuple[float, float, str]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A tuple (x, y, description) of the POI.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
 <h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.get_num" class="doc doc-heading">
           <code class="highlight language-python"><span class="n">get_num</span><span class="p">()</span></code>
 
@@ -1149,6 +1252,57 @@
             <div class="doc-md-description">
               <p>The number of POIs in the list.</p>
             </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.WafermapPoiCommandGroup.WafermapPoiCommandGroup.remove" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">remove</span><span class="p">(</span><span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Remove POI(s) from wafermap.</p>
+<p>Wraps SENTIO's map:poi:remove remote command.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>idx</code></td>
+          <td>
+                <code>int | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>POI index to remove. If None, remove all.</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
           </td>
         </tr>
     </tbody>

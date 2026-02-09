@@ -773,6 +773,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.find_thermal_die_size" class="md-nav__link">
+    find_thermal_die_size()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_lens_zoom_level" class="md-nav__link">
+    get_lens_zoom_level()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_light_status" class="md-nav__link">
+    get_light_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.has_camera" class="md-nav__link">
     has_camera()
   </a>
@@ -789,6 +810,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.remove_probetip_marker" class="md-nav__link">
     remove_probetip_marker()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.set_lens_zoom_level" class="md-nav__link">
+    set_lens_zoom_level()
   </a>
   
 </li>
@@ -1060,6 +1088,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.find_thermal_die_size" class="md-nav__link">
+    find_thermal_die_size()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_lens_zoom_level" class="md-nav__link">
+    get_lens_zoom_level()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_light_status" class="md-nav__link">
+    get_light_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.has_camera" class="md-nav__link">
     has_camera()
   </a>
@@ -1076,6 +1125,13 @@
         <li class="md-nav__item">
   <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.remove_probetip_marker" class="md-nav__link">
     remove_probetip_marker()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.set_lens_zoom_level" class="md-nav__link">
+    set_lens_zoom_level()
   </a>
   
 </li>
@@ -1293,7 +1349,7 @@ which contain single dies.</p>
 
 
 <h2 id="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.align_wafer" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">align_wafer</span><span class="p">(</span><span class="n">mode</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">align_wafer</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="n">AutoAlignCmd</span><span class="o">.</span><span class="n">AlignOnly</span><span class="p">)</span></code>
 
 </h2>
 
@@ -1326,7 +1382,7 @@ which contain single dies.</p>
             </div>
           </td>
           <td>
-              <em>required</em>
+                <code><span title="sentio_prober_control.Sentio.Enumerations.AutoAlignCmd.AlignOnly">AlignOnly</span></code>
           </td>
         </tr>
     </tbody>
@@ -1345,7 +1401,7 @@ which contain single dies.</p>
     <tbody>
         <tr>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+                <code>None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1419,7 +1475,7 @@ which contain single dies.</p>
     <tbody>
         <tr>
           <td>
-                <code>float</code>
+                <code>tuple[float, <a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.MoveAxis" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.MoveAxis">MoveAxis</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1585,30 +1641,6 @@ keeping the image in focus while moving the chuck.</p>
     </tbody>
   </table>
 
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A Response object.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
   </div>
 
 </div>
@@ -1629,30 +1661,6 @@ keeping the image in focus while moving the chuck.</p>
   
       <p>Find home position.</p>
 <p>This function uses a pre-trained pattern to fully automatically find the home position.</p>
-
-
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A Response object.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
 
   </div>
 
@@ -1741,6 +1749,168 @@ keeping the image in focus while moving the chuck.</p>
           </td>
           <td>
                 <code><span title="sentio_prober_control.Sentio.Enumerations.FindPatternReference.CenterOfRoi">CenterOfRoi</span></code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.find_thermal_die_size" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">find_thermal_die_size</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Detect thermal expansion and return die size ratio.</p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.Tuple">Tuple</span>[float, float]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A tuple of (ThermalFactorX, ThermalFactorY)</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_lens_zoom_level" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_lens_zoom_level</span><span class="p">()</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get current zoom level of the lens. </p>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>float</code></td>          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The current zoom level of the lens.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.get_light_status" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">get_light_status</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether light is on or off for a specific camera.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>camera</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Enumerations.CameraMountPoint" href="Enumerations.html#sentio_prober_control.Sentio.Enumerations.CameraMountPoint">CameraMountPoint</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>e.g. 'scope', 'offaxis'</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>True if light is ON</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -1876,11 +2046,85 @@ compatibility or provide support.</p>
     <tbody>
         <tr>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+                <code>None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A Response object.</p>
+              <p>None</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h2 id="sentio_prober_control.Sentio.CommandGroups.VisionCommandGroup.VisionCommandGroup.set_lens_zoom_level" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">set_lens_zoom_level</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set lens zoom level.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>level</code></td>
+          <td>
+                <code>float</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Zoom level, such as 1, 2, ..., 10</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>None</p>
             </div>
           </td>
         </tr>
@@ -2101,11 +2345,11 @@ panel editor to use this command.</p>
     <tbody>
         <tr>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
+                <code>None</code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>A Response object.</p>
+              <p>None</p>
             </div>
           </td>
         </tr>
@@ -2175,7 +2419,6 @@ panel editor to use this command.</p>
     <tbody>
         <tr>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2263,7 +2506,6 @@ panel editor to use this command.</p>
     <tbody>
         <tr>
           <td>
-                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.Response.Response" href="Response.html#sentio_prober_control.Sentio.ProberSentio.Response">Response</a></code>
           </td>
           <td>
             <div class="doc-md-description">
