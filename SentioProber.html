@@ -2281,6 +2281,17 @@ It provides wrapper for most of the remote commands exposed by SENTIO.</p>
           </td>
         </tr>
         <tr>
+          <td><code>chuck</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The chuck command group provides access to the chuck stage. Only available for Sentio &gt; 25.2</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td><code>loader</code></td>
           <td>
                 <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.LoaderCommandGroup.LoaderCommandGroup" href="LoaderCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.LoaderCommandGroup.LoaderCommandGroup">LoaderCommandGroup</a></code>
@@ -2309,7 +2320,7 @@ It provides wrapper for most of the remote commands exposed by SENTIO.</p>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>The probe command group provides access to the probe modules functionality.</p>
+              <p>The probe command group provides access to the probe stages.</p>
             </div>
           </td>
         </tr>
@@ -2321,6 +2332,17 @@ It provides wrapper for most of the remote commands exposed by SENTIO.</p>
           <td>
             <div class="doc-md-description">
               <p>The qalibria command group provides access to the qalibria modules functionality.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>scope</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The scope command group provides access to the scope stage. Only available for Sentio &gt; 25.2</p>
             </div>
           </td>
         </tr>
@@ -3924,6 +3946,11 @@ SENTIO's internal environment object.</p>
   <div class="doc doc-contents ">
   
       <p>Get current chuck xy position with respect to a given reference.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_xy"><code>chuck.get_xy(ref)</code></a> instead.</p>
+</div>
 
 
 
@@ -4022,6 +4049,11 @@ SENTIO's internal environment object.</p>
   <div class="doc doc-contents ">
   
       <p>Get chuck z position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_z"><code>chuck.get_z(ref)</code></a> instead.</p>
+</div>
 
 
 
@@ -4456,6 +4488,11 @@ This function returns the number of defined scope sites.</p>
   
       <p>Get current scope xy position.</p>
 <p>The returned position is an absolute position with respect to the axis zero in micrometer.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_xy"><code>scope.get_xy(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -4510,6 +4547,11 @@ This function returns the number of defined scope sites.</p>
   <div class="doc doc-contents ">
   
       <p>Get scope z position in micrometer from axis zero.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_z"><code>scope.get_z(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -4673,6 +4715,11 @@ This function returns the number of defined scope sites.</p>
   <div class="doc doc-contents ">
   
       <p>Returns True if the chuck has xyz axes.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.has_xy"><code>chuck.has_xy(...) and chuck.has_z(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -4717,6 +4764,11 @@ This function returns the number of defined scope sites.</p>
   <div class="doc doc-contents ">
   
       <p>Returns True if the scope has xyz axes.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.has_xy"><code>scope.has_xy(...) and scope.has_z(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -4761,6 +4813,11 @@ This function returns the number of defined scope sites.</p>
   <div class="doc doc-contents ">
   
       <p>Returns true if the microscope has a motorized z axis.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.has_z"><code>scope.has_z(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -5014,6 +5071,11 @@ to switch the machine back into local mode and thus enable its UI.</p>
   
       <p>Move the chuck to contact height.</p>
 <p>Wraps SENTIO's "move_chuck_contact" remote command.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>chuck.move_z(ZReference.Contact, 0)</code></a> instead.</p>
+</div>
 
 
 
@@ -5058,6 +5120,11 @@ to switch the machine back into local mode and thus enable its UI.</p>
   <div class="doc doc-contents ">
   
       <p>Move chuck to its home position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_xy"><code>chuck.move_xy(XyReference.Home, 0, 0)</code></a> instead.</p>
+</div>
 
 
 
@@ -5271,6 +5338,11 @@ to switch the machine back into local mode and thus enable its UI.</p>
   
       <p>Move chuck to "Lift" position.</p>
 <p>Wraps SENTIO's "move_chuck_lift" remote command.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.lift"><code>chuck.lift(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -5390,6 +5462,11 @@ to switch the machine back into local mode and thus enable its UI.</p>
   <div class="doc doc-contents ">
   
       <p>Move the chuck to separation height.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>chuck.move_z(ZReference.Separation, 0)</code></a> instead.</p>
+</div>
 
 
 
@@ -5656,6 +5733,11 @@ inspection of the wafer when the scope camera view is blocked by certain probe c
   
       <p>Move chuck to a given xy position.</p>
 <p>Wraps SENTIO's "move_chuck_xy" remote command.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_xy"><code>chuck.move_xy(ref, x, y)</code></a> instead.</p>
+</div>
 
 
 
@@ -5872,6 +5954,11 @@ inspection of the wafer when the scope camera view is blocked by certain probe c
   
       <p>Move chuck to a given z position.</p>
 <p>Wraps SENTIO's "move_chuck_z" remote command.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>chuck.move_z(ref, z)</code></a> instead.</p>
+</div>
 
 
 
@@ -6052,6 +6139,11 @@ inspection of the wafer when the scope camera view is blocked by certain probe c
 at its axis maximum. This position will give you the maximum
 possible are of unhindered operation when changing probe cards
 or other maintenance tasks.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.lift"><code>scope.lift(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -6102,6 +6194,11 @@ or other maintenance tasks.</p>
   <div class="doc doc-contents ">
   
       <p>Move scope to a given xy position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_xy"><code>scope.move_xy(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -6214,6 +6311,11 @@ or other maintenance tasks.</p>
   <div class="doc doc-contents ">
   
       <p>Move scope to a given z position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>scope.move_z(...)</code></a> instead.</p>
+</div>
 
 
 

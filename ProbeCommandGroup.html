@@ -1234,14 +1234,209 @@
             Bases: <code><span title="sentio_prober_control.Sentio.CommandGroups.CommandGroupBase.CommandGroupBase">CommandGroupBase</span></code></p>
 
   
-      <p>This command group contains functions for working with motorized prober.
-You are not meant to instantiate this class directly. Access it via the probe attribute
-of the <a href="SentioProber.html">SentioProber</a> class.</p>
-<p>Example:</p>
+      <p>This command group contains functions for working with motorized probes.
+You are not meant to instantiate this class directly. Access it via the probe 
+attribute of the <a href="SentioProber.html">SentioProber</a> class.</p>
+<p>To access a specific probe, use the <code>top</code> and <code>bottom</code> attributes to select the
+desired probe stage, and then the direction attributes to select the specific probe.
+If the probe stage attribute is omitted, the top probe stage is assumed.</p>
+<p>The following attributes are only available for Sentio &gt; 25.2</p>
+
+
+
+  <p><strong>Attributes:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>top.east</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top east probe. The probe can be accessed via probe.top.east or probe.east.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.west</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top west probe. The probe can be accessed via probe.top.west or probe.west.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.north</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top north probe. The probe can be accessed via probe.top.north or probe.north.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.south</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top south probe. The probe can be accessed via probe.top.south or probe.south.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.northeast</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top northeast probe. The probe can be accessed via probe.top.northeast or probe.northeast.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.northwest</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top northwest probe. The probe can be accessed via probe.top.northwest or probe.northwest.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.southeast</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top southeast probe. The probe can be accessed via probe.top.southeast or probe.southeast.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>top.southwest</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the top southwest probe. The probe can be accessed via probe.top.southwest or probe.southwest.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.east</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom east probe. The probe can be accessed via probe.bottom.east.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.west</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom west probe. The probe can be accessed via probe.bottom.west.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.north</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom north probe. The probe can be accessed via probe.bottom.north.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.south</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom south probe. The probe can be accessed via probe.bottom.south.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.northeast</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom northeast probe. The probe can be accessed via probe.bottom.northeast.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.northwest</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom northwest probe. The probe can be accessed via probe.bottom.northwest.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.southeast</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom southeast probe. The probe can be accessed via probe.bottom.southeast.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>bottom.southwest</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup" href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup">StageCommandGroup</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Command group for the bottom southwest probe. The probe can be accessed via probe.bottom.southwest.            </p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+      <p>Example:</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sentio_prober_control.Sentio.ProberSentio</span> <span class="kn">import</span> <span class="n">SentioProber</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">prober</span> <span class="o">=</span> <span class="n">SentioProber</span><span class="o">.</span><span class="n">create_prober</span><span class="p">(</span><span class="s2">&quot;tcpip&quot;</span><span class="p">,</span> <span class="s2">&quot;127.0.0.1:35555&quot;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prober</span><span class="o">.</span><span class="n">probe</span><span class="o">.</span><span class="n">move_probe_xy</span><span class="p">(</span><span class="n">ProbePosition</span><span class="o">.</span><span class="n">East</span><span class="p">,</span> <span class="n">XyReference</span><span class="o">.</span><span class="n">Current</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">prober</span><span class="o">.</span><span class="n">probe</span><span class="o">.</span><span class="n">top</span><span class="o">.</span><span class="n">east</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="n">XyReference</span><span class="o">.</span><span class="n">Current</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
 </span></code></pre></div>
 
 
@@ -1582,7 +1777,12 @@ use in conjunction with ProberSentio.wait_complete() or ProberSentio.query_comma
   <div class="doc doc-contents ">
   
       <p>Get information for a probe site.</p>
-<p>Each positioner can define n a number of predefined positions called "sites".
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_site"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.get_site(...)</code></a> instead.</p>
+</div>
+<p>Each positioner can define a number of predefined positions called "sites".
 This command returns the data associated with a site.</p>
 
 
@@ -1606,6 +1806,20 @@ This command returns the data associated with a site.</p>
           <td>
             <div class="doc-md-description">
               <p>The probe to get the site for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>idx</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The index of the site.</p>
             </div>
           </td>
           <td>
@@ -1658,6 +1872,11 @@ This command returns the data associated with a site.</p>
   <div class="doc doc-contents ">
   
       <p>Returns the total number of probe sites set up.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_site_num"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.get_site_num(...)</code></a> instead.</p>
+</div>
 <p>Each positioner can define n a number of predefined positions called "sites".
 This command returns the total number of sites.</p>
 
@@ -1789,6 +2008,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Get probe xy position in micrometer.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_xy"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.get_xy(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -1877,6 +2101,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Get probe z position in micrometer.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.get_z"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.get_xy(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -1965,6 +2194,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move a probe to its contact position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.move_z(ZReference.Contact, 0)</code></a> instead.</p>
+</div>
 
 
 
@@ -2039,6 +2273,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move probe to its home position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_xy"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.move_xy(XyReference.Home, ...)</code></a> instead.</p>
+</div>
 
 
 
@@ -2113,6 +2352,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move a probe to its lift position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.lift"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.lift()</code></a> instead.</p>
+</div>
 
 
 
@@ -2201,6 +2445,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move a probe to its separation position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.move_z(ZReference.Separation, 0)</code></a> instead.</p>
+</div>
 
 
 
@@ -2275,6 +2524,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move probe to a given position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_xy"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.move_xy(ref, x, y)</code></a> instead.</p>
+</div>
 
 
 
@@ -2391,6 +2645,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Move probe to a given z position.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.move_z"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.move_z(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -2557,6 +2816,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Set home position of a probe.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.set_home"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.set_home(...)</code></a> instead.</p>
+</div>
 
 
 
@@ -2714,6 +2978,11 @@ This command returns the total number of sites.</p>
   <div class="doc doc-contents ">
   
       <p>Step to a specific probe site.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.step_site"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.step_site(...)</code></a> instead.</p>
+</div>
 <p>Each positioner can define n a number of predefined positions called "sites".
 This command initiates a step to such a site.</p>
 
@@ -2804,6 +3073,11 @@ This command initiates a step to such a site.</p>
   <div class="doc doc-contents ">
   
       <p>Step to the first probe site.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.step_site_first"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.step_site_first(...)</code></a> instead.</p>
+</div>
 <p>Each positioner can define n a number of predefined positions called "sites".
 This command initiates a step to the first site.</p>
 
@@ -2882,6 +3156,11 @@ This command initiates a step to the first site.</p>
       <p>Step to the next probe site.</p>
 <p>Each positioner can define n a number of predefined positions called "sites".
 This command initiates a step to the next site.</p>
+<div class="admonition danger">
+<p class="admonition-title">Deprecated since Sentio 25.2</p>
+<p>This function is obsolete and will be removed in a future release. 
+Use <a href="StageCommandGroup.html#sentio_prober_control.Sentio.CommandGroups.StageCommandGroup.StageCommandGroup.step_site_next"><code>[top|bottom].{east|west|north|south|northeast|northwest|southeast|southwest}.step_site_next(...)</code></a> instead.</p>
+</div>
 
 
 

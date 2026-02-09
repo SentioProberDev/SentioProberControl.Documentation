@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://sentio.atv-systems.de/StageCommandGroup.html</loc>
+         <lastmod>2026-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://sentio.atv-systems.de/StatusCommandGroup.html</loc>
          <lastmod>2026-02-09</lastmod>
          <changefreq>daily</changefreq>
