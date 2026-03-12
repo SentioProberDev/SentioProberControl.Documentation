@@ -24,7 +24,7 @@ jobs:
       - name: Rsync upload to incoming
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avzr --delete
+          switches: -avzr --delete --exclude='.git/' --exclude='.github/' --exclude='.incoming/'
           path: ./
           remote_path: ${{ secrets.DEPLOY_PATH }}/.incoming/
           remote_host: ${{ secrets.DEPLOY_HOST }}
@@ -43,6 +43,6 @@ jobs:
             set -e
             TARGET="${{ secrets.DEPLOY_PATH }}"
 
-            rsync -a --delete "$TARGET/.incoming/" "$TARGET/"
+            rsync -a --delete --exclude='.incoming/' "$TARGET/.incoming/" "$TARGET/"
 
             rm -rf "$TARGET/.incoming"
